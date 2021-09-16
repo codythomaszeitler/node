@@ -1,0 +1,18 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "author": "Cody T. Zeitler <codyzeitler12@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "copyfiles": "^2.4.1",
+    "electron": "^14.0.1",
+    "path": "^0.12.7",
+    "typescript": "^4.4.3"
+  },
+  "scripts": {
+    "compile": "tsc && copyfiles -f src/index.html build",
+    "start": "npm run compile && electron build/index.html"
+  }
+}
